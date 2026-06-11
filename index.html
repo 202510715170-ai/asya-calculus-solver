@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsyaCalculus - AI Calculus Solver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔮 AsyaCalculus</h1>
+            <p>Solusi Kalkulus Pintar & Cepat</p>
+        </header>
+
+        <main class="calculator-card">
+            <div class="input-group">
+                <label for="expression">Masukkan Fungsi $f(x)$ :</label>
+                <input type="text" id="expression" placeholder="Contoh: x^3 + 2x^2 - 5x">
+            </div>
+
+            <div class="input-group">
+                <label for="operation">Pilih Operasi :</label>
+                <select id="operation">
+                    <option value="derivative">Turunan (Derivative)</option>
+                    <option value="integral">Integral Tak Tentu</option>
+                </select>
+            </div>
+
+            <button onclick="hitungKalkulus()">Hitung Sekarang</button>
+
+            <div class="result-box" id="result-box">
+                <h3>Hasil:</h3>
+                <p id="output-result">Menunggu input...</p>
+            </div>
+        </main>
+
+        <section class="history-section">
+            <h3>📜 Riwayat Hitungan</h3>
+            <ul id="history-list"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
